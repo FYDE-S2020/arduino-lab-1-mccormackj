@@ -64,7 +64,7 @@ Procedure A, step 1:
 ![Put path to your image here ->](img/placeholder.png)
 
 Procedure A, step 4:
-![Logic Analyzer Image](img/report.png)
+![Logic Analyzer Image](img/report.PNG)
 
 Procedure B, UART:
 ![Put path to your image here ->](img/placeholder.png)
