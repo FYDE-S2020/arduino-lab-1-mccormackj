@@ -32,11 +32,11 @@ Team Number: F1
 
 7. Profile of UART: Sent X bytes in Y time 
 
-    1.27 ms to send 13 bytes ("hello world!" and /n)
+    1.274 ms to send 13 bytes ("hello world!" and /n) *note: I am aware this is incorrect data, I misunderstood and measured from when the sample start to when the first bit was measured. The correct data should be approximately 39 ms for 36 bits
 
 8. Profile of SPI: Sent X bytes in Y time
 
-    0.39 ms to send 13 bytes ("hello world!" and /n)
+    .0015 ms to send 13 bytes ("hello world!" and /n) *note: I am aware this is incorrect data, I misunderstood and measured from when the sample start to when the first bit was measured. The correct data should be approximately 1 ms for 36 bits
 
 9. Why is SPI so much faster than UART?
 
@@ -67,7 +67,7 @@ Procedure A, step 4:
 ![Put path to your image here ->](img/report.PNG)
 
 Procedure A, step 7:
-![Logic Analyzer Image](img/dimmerreport.PNG)
+![Logic Analyzer Image](img/dimmer_report.PNG)
 
 Procedure B, UART:
 ![Put path to your image here ->](img/UART_message.PNG)
