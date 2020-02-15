@@ -1,26 +1,26 @@
-Name:
+Name: Johanna McCormack
 
-EID:
+EID: jrm7853
 
-Team Number:
+Team Number: F1
 
 ## Questions
 
 1. Why does your program need a setup and a loop?
 
-    your answer here
+    The loop needs to be able to run repeatedly, unlike setup. If setup ran every time, at best it would be slow and inefficient and at worst it would ruin the program's function.
 
 2. What is the downside to putting all your code in a loop?
 
-    your answer here
+    Some lines may run more times than needed, which isn't efficient and wastes power.
 
 3. Why does your code need to be compiled?
 
-    your answer here
+    I'm writing in C, which the computer doesn't understand as written. The compiler (and built in assembler) will turn my C code into assembly code and then into machine code so that the computer can actually understand what I've written.
 
 4. When lowering the frequency in procedure A, step 4, what is going wrong? Brainstorm some solutions. Dimmers exist in the real world. What is their solution?
 
-    your answer here
+    As the frequency is lowered, the flicker becomes more evident. Instead of the on-off pattern "dimming" the light, it visibly turns on and off at the same brightness. Dimmers in the real world will operate at a constant frequency but with different duty cycles, so you can't visibly see the flicker and the lower duty cycles are less bright.
 
 5. Why do you need to connect the logic analyzer ground to the ESP32 ground?
 
@@ -28,46 +28,49 @@ Team Number:
 
 6. What is the difference between synchronous and asynchronous communication?
 
-    your answer here
+    Synchronous transmissions are based off of a shared clock signal, happening in real time. Asynchronous communication is not real time, but sends certain signals to show when the data starts/stops.
 
 7. Profile of UART: Sent X bytes in Y time 
 
-    your answer here
+    1.274 ms to send 13 bytes ("hello world!" and /n) *note: I am aware this is incorrect data, I misunderstood and measured from when the sample start to when the first bit was measured. The correct data should be approximately 39 ms for 36 bits
 
 8. Profile of SPI: Sent X bytes in Y time
 
-    your answer here
+    .0015 ms to send 13 bytes ("hello world!" and /n) *note: I am aware this is incorrect data, I misunderstood and measured from when the sample start to when the first bit was measured. The correct data should be approximately 1 ms for 36 bits
 
 9. Why is SPI so much faster than UART?
 
-    your answer here
-
+    SPI is synchronous and doesn't have to wait for a start bit because it functions with a clock and a chip enable signal
+    
 10. list one pro and one con of UART
 
-    your answer here
-
+    PRO: UART doesn't require a clock bit
+    CON: UART can't have multiple master/slave devices
+    
 11. list one pro and one con of SPI
 
-    your answer here
+    PRO: Faster than UART and I2C
+    CON: Gets complicated with many devices
 
 12. list one pro and one con of I2C
 
-    your answer here
+    PRO: Simplest with many slave devices
+    CON: Slower than SPI
 
 13. Why does I2C need external resistors to work?
 
-    your answer here
+    The lines in I2C are open drain, so they need to have external resistors (pull up or pull down) to work properly.
 
 ## Screenshots
 
-Procedure A, step 1:
-![Put path to your image here ->](img/placeholder.png)
-
 Procedure A, step 4:
-![Logic Analyzer Image](img/report.PNG)
+![Put path to your image here ->](img/report.PNG)
+
+Procedure A, step 7:
+![Logic Analyzer Image](img/dimmer_report.PNG)
 
 Procedure B, UART:
-![Put path to your image here ->](img/placeholder.png)
+![Put path to your image here ->](img/UART_message.PNG)
 
 Procedure B, SPI:
-![Put path to your image here ->](img/placeholder.png)
+![Put path to your image here ->](img/SPI_message.PNG)
